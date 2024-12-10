@@ -139,7 +139,10 @@
 
     <!-- Link to Member/Attendance Page -->
     <a href="{{ route('attendance.create') }}" class="btn">Manage Members & Attendance</a>
-
+    <form action="{{ route('attendance.download') }}" method="POST">
+        @csrf 
+        <button class="btn btn-sm btn-info" >Excel</button>
+    </form>
 </div>
 
 <!-- Footer -->

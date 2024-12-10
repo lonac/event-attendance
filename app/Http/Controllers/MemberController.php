@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Member;
 use App\Models\MaritalStatus;
 use Illuminate\Http\Request;
+use App\Exports\MemberExport;
+use Maatwebsite\Excel\Facades\Excel;
 use DB;
 
 class MemberController extends Controller
@@ -97,7 +99,8 @@ class MemberController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Excel::download(new MemberExport, 'members.xlsx');
+
     }
 
     /**

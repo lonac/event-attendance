@@ -7,7 +7,7 @@ use App\Http\Controllers\PhotoController;
 
 Route::get('/', [MemberController::class, 'index']);
 Route::get('attendance', [MemberController::class, 'create'])->name('attendance.create');
-Route::post('attendance', [MemberController::class, 'store'])->name('attendance.register');
+Route::post('download', [MemberController::class, 'store'])->name('attendance.download');
 
 
 
@@ -17,4 +17,6 @@ Route::post('member-registration', [MemberController::class, 'registerMember'])-
 
 Route::post('/attendance/update/{id}', [MemberController::class, 'updateAttendance'])->name('attendance.update');
 Route::post('/attendance/register/{id}', [MemberController::class, 'registerMember']);
+
+
 

@@ -15,12 +15,9 @@ class ZoneSeeder extends Seeder
     public function run(): void
     {
         $zones = [
-            ['name' => 'MJINI KATI'],
-            ['name' => 'NKUHUNGU'],
-            ['name' => 'NTYUKA'],
-            ['name' => 'KISASA'],
-            ['name' => 'MAKULU'],
-            ['name' => 'ZUZU'],
+            ['name' => 'TANZANIA'],
+            ['name' => 'KENYA'],
+            ['name' => 'UGANDA'],
         ];
 
         DB::table('zones')->insert($zones);
